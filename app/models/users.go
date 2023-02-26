@@ -14,6 +14,7 @@ type User struct {
 	CreatedAt time.Time
 }
 
+// User 生成
 func (user *User) CreateUser() (err error) {
 	cmd := `insert into users (
 		uuid,
@@ -34,4 +35,21 @@ func (user *User) CreateUser() (err error) {
 	}
 
 	return err
+}
+
+// User情報取得
+func GetUser(id int) (user User, err error) {
+	user = User{}
+	cmd := `select id, uuid, name, email, password, created_at
+					from users
+					where id = ?`
+	err = Db.QueryRow(cmd, id).Scan(
+		&user.ID,
+		&user.UUID,
+		&user.Name,
+		&user.Email,
+		&user.PassWord,
+		&user.CreatedAt,
+	)
+	return user, err
 }
