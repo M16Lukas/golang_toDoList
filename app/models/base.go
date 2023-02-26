@@ -17,6 +17,7 @@ var err error
 // テーブル名宣言
 const (
 	tableNameUser = "users"
+	tableNameTodo = "todos"
 )
 
 // テーブル作成
@@ -43,6 +44,16 @@ func init() {
 		)`, tableNameUser)
 
 	Db.Exec(cmdCreateUserTable)
+
+	cmdCreateTodoTable := fmt.Sprintf(
+		`CREATE TABLE IF NOT EXISTS %s(
+			id 					INTEGER PRIMARY KEY AUTOINCREMENT,
+			content 		TEXT,
+			user_id 		INTEGER,
+			created_at 	DATETIME
+		)`, tableNameTodo)
+
+	Db.Exec(cmdCreateTodoTable)
 }
 
 func createUUID() (uuidobj uuid.UUID) {
