@@ -1,7 +1,7 @@
 package config
 
 import (
-	"golang_toDoList/config/utils"
+	"golang_toDoList/utils"
 	"log"
 
 	"gopkg.in/ini.v1"
