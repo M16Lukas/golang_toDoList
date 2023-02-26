@@ -20,6 +20,13 @@ func main() {
 	// fmt.Println(user)
 	// user.CreateUser()
 
-	v, _ := models.GetUser(1)
-	fmt.Println(v)
+	user, _ := models.GetUser(1)
+	fmt.Println(user)
+
+	user.Name = "test2"
+	user.Email = "test2@google.com"
+	user.UpdateUser()
+
+	user, _ = models.GetUser(1)
+	fmt.Println(user)
 }
