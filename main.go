@@ -29,4 +29,8 @@ func main() {
 
 	user, _ = models.GetUser(1)
 	fmt.Println(user)
+
+	user.DeleteUser()
+	user, _ = models.GetUser(1)
+	fmt.Println(user)
 }
