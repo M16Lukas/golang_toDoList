@@ -173,7 +173,6 @@ func (sess *Session) GetUserBySession() (user User, err error) {
 		&user.UUID,
 		&user.Name,
 		&user.Email,
-		&user.PassWord,
 		&user.CreatedAt,
 	)
 

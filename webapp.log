@@ -528,3 +528,6 @@ net/http.(*conn).serve(0xc00020cb40, {0x11bd738, 0xc000024f00})
 created by net/http.(*Server).Serve
 	C:/Program Files/Go/src/net/http/server.go:3089 +0x5ed
 2023/03/01 20:24:08 route_main.go:25: sql: expected 5 destination arguments in Scan, not 6
+2023/03/01 20:26:57 route_main.go:25: sql: expected 5 destination arguments in Scan, not 6
+2023/03/01 20:26:57 route_main.go:25: sql: expected 5 destination arguments in Scan, not 6
+2023/03/01 20:31:23 route_main.go:25: sql: expected 5 destination arguments in Scan, not 6
